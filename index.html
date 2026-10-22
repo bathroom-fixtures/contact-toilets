@@ -52,7 +52,6 @@
             <div class="form-col">
                 <h2 class="form-title">Drop Us A Line</h2>
                 <p class="form-desc">Have a question or comment? Use the form below to send us a message or contact us by mail at:</p>
-                <!-- Forminit表单 enctype必须multipart/form-data支持文件上传 -->
                 <form id="contactForm" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Your Name*</label>
@@ -69,11 +68,6 @@
                     <div class="form-group">
                         <label for="comment">Comment</label>
                         <textarea id="comment" name="fi-text-message" placeholder="Write your message or complaint here..."></textarea>
-                    </div>
-                    <!-- 单个多文件上传框，支持多选 -->
-                    <div class="form-group">
-                        <label>Attachments (you can select multiple files)</label>
-                        <input type="file" name="fi-file-attachments[]" multiple accept=".pdf,.doc,.docx,.jpg,.png,.jpeg">
                     </div>
 
                     <button class="btn-send" type="submit">SEND</button>
@@ -137,4 +131,3 @@ form.addEventListener('submit',async e=>{
 </script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->
