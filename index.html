@@ -14,6 +14,9 @@
         }
         a {text-decoration: none;color: #222;}
         a:hover {text-decoration: underline;}
+        .banner-wrap{width:100%;}
+        .banner-desktop{width:100%;display:block;object-fit:cover;}
+        .banner-mobile{width:100%;display:none;object-fit:cover;}
         .container {max-width: 1200px;margin: 0 auto;padding: 0 20px;}
         header {padding: 24px 0;text-align: center;}
         .header-title {font-size: 22px;font-weight: 700;color: #222;}
@@ -37,6 +40,8 @@
         #form-status {margin-top:12px;font-size:14px;}
         @media (max-width:768px) {
             .contact-wrap {grid-template-columns: 1fr;gap: 36px;}
+            .banner-desktop{display:none;}
+            .banner-mobile{display:block;}
         }
         @media (max-width:480px) {
             .info-item {align-items: flex-start;}
@@ -44,6 +49,10 @@
     </style>
 </head>
 <body>
+    <div class="banner-wrap">
+        <img class="banner-desktop" src="https://cdn.shopify.com/s/files/1/0692/2436/6337/files/toilet_contact_banner.png?v=1792652297" alt="Contact banner">
+        <img class="banner-mobile" src="https://cdn.shopify.com/s/files/1/0692/2436/6337/files/toilet_contact_us_banner.png?v=1792652980" alt="Contact banner">
+    </div>
     <div class="container">
         <header>
             <div class="header-title">NEED ANY HELP?</div>
@@ -69,7 +78,6 @@
                         <label for="comment">Comment</label>
                         <textarea id="comment" name="fi-text-message" placeholder="Write your message or complaint here..."></textarea>
                     </div>
-
                     <button class="btn-send" type="submit">SEND</button>
                     <div id="form-status"></div>
                 </form>
@@ -101,7 +109,6 @@
     </div>
     <div class="copyright">© 2026, Toilet Company. All Rights Reserved.</div>
 
-<!-- Forminit SDK -->
 <script src="https://forminit.com/sdk/v1/forminit.js"></script>
 <script>
 const forminit = new Forminit();
