@@ -46,6 +46,11 @@
         @media (max-width:480px) {
             .info-item {align-items: flex-start;}
         }
+        @media (max-width:768px) {
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -63,28 +68,33 @@
                 <p class="form-desc">Got questions or feedback? Send us a message via the form below, or reach us by phone or email.</p>
                 <!-- StaticForms Form -->
                 <form id="contactForm" action="https://api.staticforms.dev/submit" method="POST">
-                    <input type="hidden" name="apiKey" value="sf_38fc1c1c40f17765bf98b7c7" />
-                    <input type="hidden" name="subject" value="contact-toilet submission" />
+    <input type="hidden" name="apiKey" value="sf_38fc1c1c40f17765bf98b7c7" />
+    <input type="hidden" name="subject" value="contact-toilet submission" />
 
-                    <div class="form-group">
-                        <label for="name">Your Name*</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number*</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Comment</label>
-                        <textarea id="comment" name="message" placeholder="Write your message here..."></textarea>
-                    </div>
-                    <button class="btn-send" type="submit">SEND</button>
-                    <div id="form-status"></div>
-                </form>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="form-group">
+            <label for="name">Your Name*</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required placeholder="your@gmail.com">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone number">
+    </div>
+
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea id="comment" name="message" placeholder="Write your message here... Order number, product model & purchase platform help us assist faster."></textarea>
+    </div>
+
+    <button class="btn-send" type="submit">SEND</button>
+    <div id="form-status"></div>
+</form>
             </div>
             <div class="info-col">
                 <div class="info-block">
